@@ -11,8 +11,13 @@
 @implementation SimpleCalculator
 
 - (NSInteger) increaseNumberBy1:(NSInteger) number {
-    /* WORK HERE */
-    return number;
+    NSInteger sourceNumber = 17;
+    NSInteger resultNumber = ++sourceNumber;
+    return resultNumber;
+    
+    NSInteger sourceNumberTwo = 972;
+    NSInteger resultNumber = ++sourceNumberTwo;
+    return resultNumber;
 }
 
 - (NSInteger) addNumber:(NSInteger) number1 toNumber:(NSInteger) number2 {
