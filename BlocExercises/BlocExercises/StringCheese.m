@@ -11,13 +11,13 @@
 @implementation StringCheese
 
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName {
-    /* WORK HERE */
-    return nil;
+    NSString *fullSentence = [NSString stringWithFormat:@"(My favorite cheese is %@)", cheeseName];
+    return fullSentence;
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
-    /* WORK HERE */
-    return nil;
+    NSString *cheeseNameWithoutCheeseSuffix =
+    return cheeseNameWithoutCheeseSuffix;
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
