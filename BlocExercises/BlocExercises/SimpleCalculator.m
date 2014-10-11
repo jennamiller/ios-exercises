@@ -11,23 +11,15 @@
 @implementation SimpleCalculator
 
 - (NSInteger) increaseNumberBy1:(NSInteger) number {
-    NSInteger sourceNumber = 17;
-    NSInteger resultNumber = ++sourceNumber;
-    return resultNumber;
-    
-    NSInteger sourceNumberTwo = 972;
-    NSInteger resultNumber = ++sourceNumberTwo;
-    return resultNumber;
+    return ++number;
 }
 
 - (NSInteger) addNumber:(NSInteger) number1 toNumber:(NSInteger) number2 {
-    /* WORK HERE */
-    return number1;
+    return number1+number2;
 }
 
 - (NSInteger) remainderOfNumber:(NSInteger) dividend dividedByNumber:(NSInteger) divisor {
-    /* WORK HERE */
-    return 0;
+    return dividend % divisor;
 }
 
 @end
