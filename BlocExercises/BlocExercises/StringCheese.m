@@ -16,8 +16,11 @@
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
+    if ([cheeseName  isEqual: @" cheese"]) {
+        return [cheeseName stringByReplacingOccurrencesOfString:@" cheese"withString:@""];
+    } else {
     return [cheeseName stringByReplacingOccurrencesOfString:@" Cheese"withString:@""];
-    return [cheeseName stringByReplacingOccurrencesOfString:@" cheese"withString:@""];
+    }
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
