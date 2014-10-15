@@ -16,7 +16,7 @@
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
-    if ([cheeseName  isEqual: @" cheese"]) {
+    if ([cheeseName  containsString:@" cheese"]) {
         return [cheeseName stringByReplacingOccurrencesOfString:@" cheese"withString:@""];
     } else {
     return [cheeseName stringByReplacingOccurrencesOfString:@" Cheese"withString:@""];
