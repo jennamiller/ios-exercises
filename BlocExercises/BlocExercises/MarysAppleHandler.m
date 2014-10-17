@@ -12,12 +12,14 @@
 
 - (NSString *) itemMaryCanPurchaseForDollars:(NSInteger)dollars {
     NSString *itemToReturn;
-
+    if ([dollars <= 4]) {
+        itemToReturn = @"get ouf of the store";
+    }
+    }
     /* WORK HERE */
     
-    NSLog(@"For $%ld, Mary can: %@", (long)dollars, itemToReturn);
-    return itemToReturn;
-}
+   // NSLog(@"For $%ld, Mary can: %@", (long)dollars, itemToReturn);
+    // return itemToReturn;
 
 - (NSUInteger) dollarCostForAppleFlavoredVodka {
     /* WORK HERE */
