@@ -11,15 +11,19 @@
 @implementation AwesomeCounter
 
 - (NSString *) stringWithNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
-    while (number != otherNumber) {
-    if (number < otherNumber) {
-        ++number;
-    } else if (number > otherNumber) {
-        --number;
+    if (number == otherNumber) {
+        return [NSString stringWithFormat:@"%ld", number];
     }
-}
-    return @"strings differed";
+    
+    NSMutableString *stringReturned = [NSMutableString new];
+    while (number != otherNumber) {
+        if (number < otherNumber) {
+        stringReturned = @"%ld", ++number;
+        } else if (number > otherNumber) {
+        stringReturned = @"%ld", --number;
+        }
+    }
+    return stringReturned;
 }
 
 @end
- 
