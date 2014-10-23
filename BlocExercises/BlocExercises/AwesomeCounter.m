@@ -20,8 +20,7 @@
         if (number < otherNumber) {
         stringReturned = @"%lu", ++number;
         } else if (number > otherNumber) {
-            ++otherNumber;
-        stringReturned = @"%lu", --otherNumber;
+        stringReturned = @"%lu", ++otherNumber;
         }
     }
     return stringReturned;
