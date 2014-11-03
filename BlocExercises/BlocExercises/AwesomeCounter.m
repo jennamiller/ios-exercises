@@ -18,7 +18,7 @@
     NSMutableString *stringReturned = [NSMutableString new];
     while (number != otherNumber) {
         if (number < otherNumber) {
-            [stringReturned appendString: [NSString stringWithFormat:@"%lu", number]];
+            [stringReturned appendString: [NSString stringWithFormat:@"%d", number]];
             number++;
         } else if (number > otherNumber) {
             [stringReturned appendString: [NSString stringWithFormat:@"%lu", otherNumber]];

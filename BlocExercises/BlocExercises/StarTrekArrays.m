@@ -23,17 +23,24 @@
     return stringOfStarTrekCharactersFromArray;
 }
 
-- (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
-    NSArray *alphabeticallySortedStarTrekCharactersFromArray = characterArray;
+- (NSMutableArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
+    NSMutableArray *alphabeticalCharacters = [NSMutableArray new];
+    [alphabeticalCharacters addObjectsFromArray:characterArray];
     NSSortDescriptor *sortStarTrek = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
-    [alphabeticallySortedStarTrekCharactersFromArray sortUsingDescriptors:@[sortStarTrek]];
-    return alphabeticallySortedStarTrekCharactersFromArray;
+    [alphabeticalCharacters sortUsingDescriptors:@[sortStarTrek]];
+    return alphabeticalCharacters;
 }
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
+    NSMutableArray *alphabeticalCharacters = [NSMutableArray new];
+    [alphabeticalCharacters addObjectsFromArray:characterArray];
     NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
-    [characterArray filterUsingPredicate:containsWorf];
-    return characterArray;
+    [alphabeticalCharacters filterUsingPredicate:containsWorf];
+    if (alphabeticalCharacters.count == 0 ) {
+        return NO;
+    } else {
+    return YES;
+    }
 }
 
 @end
