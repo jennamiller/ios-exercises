@@ -23,7 +23,7 @@
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     NSMutableArray *favoriteDrinks = [NSMutableArray new];
     [charactersArray enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
-    if ([containsString:@"favorite drink"]) {
+    if (containsString:@"favorite drink") {
         [favoriteDrinks addObjectFromArray:charactersArray];
     } else {
         nil;
@@ -32,8 +32,9 @@
 }
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
-    /* WORK HERE */
-    return @{};
+    NSMutableDictionary *characterWithQuote = [characterDictionary mutableCopy];
+    addObjectToDictionary:@"Inspirational quote";
+    return characterWithQuote;
 }
 
 @end
