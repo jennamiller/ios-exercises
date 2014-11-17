@@ -22,18 +22,20 @@
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     NSMutableArray *favoriteDrinks = [NSMutableArray new];
-    [charactersArray enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
-    if (containsString:@"favorite drink") {
+    
+        [StarTrekDictionaries enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
+    if (StarTrekDictionaries containsString:@"favorite drink") {
         [favoriteDrinks addObjectFromArray:charactersArray];
     } else {
         nil;
-    }]
+    }
     return favoriteDrinks;
 }
 
+
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     NSMutableDictionary *characterWithQuote = [characterDictionary mutableCopy];
-    addObjectToDictionary:@"Inspirational quote";
+    [characterWithQuote setObject:@"inspirational quote" forKey:@"quote"];
     return characterWithQuote;
 }
 
