@@ -22,13 +22,7 @@
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     NSMutableArray *favoriteDrinks = [NSMutableArray new];
-    
-        [StarTrekDictionaries enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
-    if (StarTrekDictionaries containsString:@"favorite drink") {
-        [favoriteDrinks addObjectFromArray:charactersArray];
-    } else {
-        nil;
-    }
+  //      [StarTrekDictionaries enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
     return favoriteDrinks;
 }
 

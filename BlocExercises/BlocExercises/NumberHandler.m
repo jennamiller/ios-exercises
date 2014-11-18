@@ -11,31 +11,33 @@
 @implementation NumberHandler
 
 - (NSNumber *) numberThatIsTwiceAsBigAsNumber:(NSNumber *)number {
-    NSNumber *newNumber = [NSNumber numberWithInt:@"@%", number];
-    newNumber * 2;
-    return newNumber;
+    return [NSNumber numberWithInt:(number.intValue * 2)];
 }
 
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
-    NSMutableArray *allTheNumbers;
-    while (number < otherNumber) {
-        [allTheNumbers addObject:@"%@", number];
-        ++number;
-    } else while (number > otherNumber) {
-        [allTheNumbers addObject:@"%@", otherNumber];
+    NSMutableArray *allTheNumbers = [NSMutableArray new];
+    if (number <= otherNumber) {
+        while (number <= otherNumber) {
+            [allTheNumbers addObject:[NSNumber numberWithInt:((int)number)]];
+            ++number;
+    }
+    } else if (number >= otherNumber) {
+        while (number >= otherNumber) {
+        [allTheNumbers addObject:[NSNumber numberWithInt:((int)otherNumber)]];
         ++otherNumber;
+    }
     }
     return allTheNumbers;
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
-    if (number < otherNumber) {
-        return number;
-    } else {
-        return otherNumber;
+    NSNumber *smallestNumber = @1000000;
+    for (int i = 0; i < arrayOfNumbers.count; i++) {
+        if ((NSNumber)[arrayOfNumbers objectAtIndex:i].intValue < smallestNumber.intValue) {
+            smallestNumber.intValue = ((NSNumber)[arrayOfNumbers objectAtIndex:i]).intValue;
+        }
     }
-    return YES;
+    return (int)smallestNumber;
 }
 
 @end
- 
