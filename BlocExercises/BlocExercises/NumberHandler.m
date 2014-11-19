@@ -31,11 +31,10 @@
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
-    NSNumber *smallestNumber = @1000000;
+    NSInteger smallestNumber = 1000000;
     for (int i = 0; i < arrayOfNumbers.count; i++) {
-        if ((NSNumber)[arrayOfNumbers objectAtIndex:i].intValue < smallestNumber.intValue) {
-            smallestNumber.intValue = ((NSNumber)[arrayOfNumbers objectAtIndex:i]).intValue;
-        }
+        NSNumber *num = [arrayOfNumbers objectAtIndex:i];
+        if (num.intValue < smallestNumber) smallestNumber = num.intValue;
     }
     return (int)smallestNumber;
 }

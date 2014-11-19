@@ -22,10 +22,16 @@
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     NSMutableArray *favoriteDrinks = [NSMutableArray new];
-  //      [StarTrekDictionaries enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
+    for (NSDictionary *dictionary in charactersArray) {
+        for (NSString *key in dictionary) {
+            NSString *value = [dictionary objectForKey:key];
+            if ([key isEqualToString:@"favorite drink"]) {
+                [favoriteDrinks addObject:(@"%@", value)];
+            }
+        }
+    }
     return favoriteDrinks;
 }
-
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     NSMutableDictionary *characterWithQuote = [characterDictionary mutableCopy];
