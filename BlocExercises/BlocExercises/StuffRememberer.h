@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface StuffRememberer : NSObject
+@property NSMutableArray *rememberThisArrayForLater;
+@property CGFloat rememberThisFloatForLater;
+@property NSMutableArray *arrayToCopy;
 
 /*
  
