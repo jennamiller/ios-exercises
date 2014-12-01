@@ -23,13 +23,15 @@ Arrays & Dictionaries
 
 var numberArray = [1, 2, 3, 4]
     numberArray.append(5)
+print(numberArray)
 
 
 
-let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 // Add 5 : "five" to this dictionary
 // WORK HERE
-
+numberDictionary[5] = "five"
+    print(numberDictionary)
 /*
 
 Loops
@@ -37,8 +39,19 @@ Loops
 */
 
 // Use a closed range loop to print 1 - 10, inclusively
-// WORK HERE
+var numberVariable = 1
+var numbersOneThroughTen = Array<Int>()
+for numberVariable in 1...10 {
+        numbersOneThroughTen.append(numberVariable)
+    }
+    println(numbersOneThroughTen)
 
+var numbersOneThroughTenAgain = Array<Int>()
+for numberVariable in 1..<11 {
+    numbersOneThroughTenAgain.append(numberVariable)
+    }
+    println(numbersOneThroughTenAgain)
+    
 // Use a half-closed range loop to print 1 - 10, inclusively
 // WORK HERE
 
@@ -59,8 +72,11 @@ let characters = [worf, picard]
 
 func favoriteDrinksArrayForCharacters(characters:Array<Dictionary<String, String>>) -> Array<String> {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
-    // WORK HERE
-    return []
+var favoriteDrinks = Array<String>()
+    for dictionary in characters {
+        favoriteDrinks.append(dictionary["favorite drink"]!)
+        }
+    return favoriteDrinks
 }
 
 let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
@@ -77,7 +93,9 @@ Functions
 
 let strings = ["milk", "eggs", "bread", "challah"]
 
-// WORK HERE - make your function and pass `strings` in
+func createNewList(strings: String) -> String {
+    println(/(newStrings) + ;)
+}
 
 let expectedOutput = "milk;eggs;bread;challah"
 
@@ -90,4 +108,4 @@ Closures
 let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All Berries", "Cookie Crisp"]
 
 // Use a closure to sort this array alphabetically
-// WORK HERE
+sort(cerealArray)
