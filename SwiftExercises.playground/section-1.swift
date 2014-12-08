@@ -91,10 +91,12 @@ Functions
 
 // Make a function that inputs an array of strings and outputs the strings separated by a semicolon
 
-let strings = ["milk", "eggs", "bread", "challah"]
+var strings = ["milk", "eggs", "bread", "challah"]
+var joiner = ";"
+let joinedStrings = joiner.join(strings)
 
-func createNewList(strings: String) -> String {
-    println(/(newStrings) + ;)
+func printNewList() {
+    println("\(joinedStrings)")
 }
 
 let expectedOutput = "milk;eggs;bread;challah"
@@ -107,5 +109,7 @@ Closures
 
 let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All Berries", "Cookie Crisp"]
 
+let cerealsSortedAlphabetically = sorted(cerealArray, <)
+
 // Use a closure to sort this array alphabetically
-sort(cerealArray)
+
