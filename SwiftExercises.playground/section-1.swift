@@ -1,5 +1,6 @@
 import UIKit
 
+
 /*
 
 Strings
@@ -20,6 +21,7 @@ let fullSentence = "My favorite cheese is \(cheese)"
 Arrays & Dictionaries
 
 */
+
 
 var numberArray = [1, 2, 3, 4]
     numberArray.append(5)
